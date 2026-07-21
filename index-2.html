@@ -1,35 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Créditos para todos</title>
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créditos para todos</title>
+<style>
+  :root{
+    --bg:#0d0d0d;
+    --card:#161616;
+    --ink:#f5f5f5;
+    --muted:#9a9a9a;
+    --line:#2a2a2a;
+    --accent:#e7c873;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px 60px;
+  }
+  .page{
+    width:100%;
+    max-width:480px;
+    text-align:center;
+  }
+  .badge{
+    display:inline-block;
+    font-size:0.7rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    border:1px solid var(--accent);
+    border-radius:999px;
+    padding:4px 14px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:1.5rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0 0 6px;
+  }
+  .subtitle{
+    color:var(--muted);
+    font-size:0.9rem;
+    margin-bottom:32px;
+  }
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  a.link-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 18px;
+    text-decoration:none;
+    color:var(--ink);
+    transition:border-color 0.15s ease, transform 0.15s ease;
+  }
+  a.link-card:active{ transform:scale(0.98); }
+  a.link-card:hover{ border-color:var(--accent); }
+  .link-name{ font-weight:600; font-size:1.02rem; }
+  .link-desc{ color:var(--muted); font-size:0.78rem; margin-top:2px; }
+  .arrow{ color:var(--accent); font-size:1.1rem; }
+  footer{
+    margin-top:40px;
+    color:var(--muted);
+    font-size:0.75rem;
+  }
+</style>
 </head>
 <body>
+  <div class="page">
+    <img src="logo-celulander.jpg" alt="Celulander" style="width:140px; max-width:60%; display:block; margin:0 auto 18px auto;">
+    <span class="badge">Créditos para todos</span>
+    <h1>Créditos para todos</h1>
+    <p class="subtitle">Elige una opción para continuar</p>
 
-  <header class="hero">
-    <img src="assets/hero.jpg" alt="Persona feliz con su nuevo celular" class="hero-img">
-    <div class="hero-overlay">
-      <h1>Créditos para todos</h1>
-      <p>Elige una opción para continuar</p>
+    <div class="links">
+      <a class="link-card" href="https://maps.app.goo.gl/Dm1yxQFU5fRGfgDc9" target="_blank" rel="noopener">
+        <div>
+          <div class="link-name">📍 Dirección</div>
+          <div class="link-desc">Cómo llegar a nuestro local</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link-card" href="creditos.html">
+        <div>
+          <div class="link-name">💳 Solicita tu cupo de crédito</div>
+          <div class="link-desc">Sistecrédito · Addi · Agaval · Esmiopcion · Banco de Bogotá · tarjetas y créditos nequi</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://wa.me/573001210101" target="_blank" rel="noopener">
+        <div>
+          <div class="link-name">💬 Línea de atención</div>
+          <div class="link-desc">Escríbenos por WhatsApp</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
     </div>
-  </header>
 
-  <main class="cards">
-    <a class="card" href="creditos.html">
-      <span class="card-icon">💳</span>
-      <div class="card-text">
-        <h2>Solicita tu cupo de crédito</h2>
-        <p>Sistecrédito · Addi · Agaval · Esmiopcion · Banco de Bogotá · tarjetas y créditos Nequi</p>
-      </div>
-      <span class="card-arrow">→</span>
-    </a>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Créditos para todos</p>
-  </footer>
-
+    <footer>
+      © 2026 Créditos para todos
+    </footer>
+  </div>
 </body>
 </html>
